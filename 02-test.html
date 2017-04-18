@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="div1">
+		{{1+2}}
+	</div>
+	<script>
+		var oDiv = Document.getElementById('div1');
+		var ss = oDiv.innerHTML;
+		// console.log(typeof(ss));
+		// alert(ss);
+		// var arr = ss.split('+');
+		// console.log(ss)
+		var re = /{{.+}}/ig;
+		// console.log(re.test(ss));
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="div1">
+		<?php echo $a['id?>
+		//{{id}}
+	</div>
+</body>
+</html>
+<?php
+	$a=array('id'=>1);
+?> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="div1">
+		//{{id}}
+	</div>
+	<script>
+		var name = 'laoshan';
+		var odiv = document.getElementById('div1');
+		var Text = odiv.innerHTML;
+		// alert(text);
+		// 正则方式
+		//如何定义正则
+		//var re = new RegExp();
+		//或var re ==//;
+		var re = /{{\w+}}/ig;//i表示大小写不明显g表示全局匹配
+		// console.log(re.test(Text));能匹配true否则false；
+		// console.log(Text.match(re));
+		// odiv.innerHTML = Text.replace(re,name);
+		//解决变量显示 表达式计算 执行函数
+	</script>
+</body>
+</html>
