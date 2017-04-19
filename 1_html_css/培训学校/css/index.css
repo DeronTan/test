@@ -1,0 +1,80 @@
+/**********news开始************/
+#news{
+	height: 195px;
+}
+#news .wrapper{
+	height: 195px;
+	padding-top: 20px;
+}
+#news-left{
+	width: 660px;
+	height: 155px;
+	background: gray;
+	float: left;
+}
+#news-right{
+	width: 400px;
+	height: 155px;
+	background: yellow;
+	float: right;
+}
+#news .newest{
+	float: left;
+}
+#news .more{
+	float: right;
+	width: 100px;
+	height: 30px;
+}
+#news a{
+	width: 100px;
+	height: 30px;
+	display: block;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 15px;
+}
+#news .more a:hover{
+	background: red;
+	color: #fff;
+}
+#news-list{
+	clear: both;
+	width: 660px;
+	height: 90px;
+}
+#news-list li{
+	width: 290px;
+	height: 30px;
+	background: url(../img/home-bg1.png) no-repeat left center;
+	float: left;
+}
+#news-list a{
+	width: 290px;
+	height: 30px;
+	display: block;
+	font-size: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**********news结束************/

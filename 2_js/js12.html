@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		li{
+			background: #f00;
+		}
+	</style>
+</head>
+<body>
+
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+	
+	<script>
+		//闭包：外部函数内定义内部函数，内部函数调用外部函数的变量，外部函数的变量不会回收
+		var aLi = document.getElementsByTagName('li');
+		for(var i=0; i<aLi.length; i++){
+			(function(idx){
+				aLi[idx].onclick = function(){
+					alert(idx);
+				};
+			})(i);
+		}
+
+		// var aa = ;
+		// (function(str){//函数立即调用
+		// 	console.log(str);
+		// })('abc');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

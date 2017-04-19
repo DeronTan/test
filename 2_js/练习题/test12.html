@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script>
+		function collectDigits(str){
+			var result = '';
+			for(var i=0; i<str.length; i++){
+				var temp = str.charAt(i);
+				if(temp >= '0' && temp <= '9'){
+					result += temp;
+				}
+			}
+			return result;
+		}
+
+		/*
+			var a = parseInt('2');
+			a.toString(); || a + ''
+		*/
+
+
+		document.write(collectDigits('1abc12def4'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

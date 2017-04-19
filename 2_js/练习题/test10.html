@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		//递归
+		function fibonacci1(n){
+			if(n ==1 || n==2){
+				return 1;
+			}
+			return fibonacci1(n-1) + fibonacci1(n-2);
+		}
+
+		//非递归
+		function fibonacci2(n){
+			if(n ==1 || n==2){
+				return 1;
+			}
+			var num1 = 1;
+			var num2 = 1;
+			var temp;
+			for(var i=3; i<=n; i++){
+				temp = num1 + num2;
+				num1 = num2;
+				num2 = temp;
+			}
+			return temp;
+
+		}
+
+		document.write(fibonacci1(10));
+		document.write(fibonacci2(10));
+
+	</script>
+
+</body>
+</html>

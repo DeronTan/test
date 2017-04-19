@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		#container{
+			width: 300px;
+			height: 50px;
+			margin: 200px auto;
+		}
+		#search-text{
+			width: 298px;
+			height: 30px;
+			border: 1px solid #000;
+			text-indent: 10px;
+		}
+		#search-result{
+			width: 298px;
+			border: 1px solid #000;
+			display: none;
+		}
+		#search-result li{
+			height: 30px;
+			line-height: 30px;
+			text-indent: 10px;
+		}
+		#search-result li:hover{
+			background: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<input type="text" id="search-text">
+		<ul id="search-result"></ul>
+	</div>
+
+	<script>
+		var arr = ['iphone4', 'iphone5', 'iphone6', 'samsung'];
+		var oSearchText = document.getElementById('search-text');
+		var oSearchResult = document.getElementById('search-result');
+		
+
+		oSearchText.onkeyup = function(e){
+			if(e.which == 38 || e.which == 40 || e.which == 13){
+				return;
+			}else{
+				if(this.value != ''){
+					oSearchResult.innerHTML = '';
+					for(var i=0; i<arr.length; i++){
+						if(arr[i].indexOf(this.value) != -1){
+							var oLi = document.createElement('li');
+							oLi.innerHTML = arr[i];
+							oLi.onclick = function(){
+								oSearchText.value = this.innerHTML;
+								oSearchResult.style.display = 'none';
+
+							};
+
+							oSearchResult.appendChild(oLi);
+							oSearchResult.style.display = 'block';
+
+						}
+					}
+				}else{
+					// oSearchResult.innerHTML = '';
+					oSearchResult.style.display = 'none';
+
+				}
+			}
+
+			
+		};
+
+		var index = -1;
+		oSearchText.onkeydown = function(e){
+			if(e.which == 38 || e.which == 40){
+				if(e.which == 40){
+					index++;
+
+					for(var j=0; j<oSearchResult.children.length;j++){
+						oSearchResult.children[j].style.background = 'transparent';
+					}
+					oSearchResult.children[index].style.background = '#ccc';
+					if(index == oSearchResult.children.length - 1){
+						index = -1;
+					}
+				}
+			}
+			if(e.which == 13){
+				if(index == -1){
+					oSearchText.value = oSearchResult.children[index].innerHTML;
+					oSearchResult.style.display = 'none';
+				}else{
+					oSearchText.value = oSearchResult.children[index].innerHTML;
+					
+				}
+
+				
+
+
+			}
+
+		};
+
+
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

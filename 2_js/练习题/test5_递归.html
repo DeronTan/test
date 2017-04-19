@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function factorial(num){
+			if(num == 1 || num == 0){
+				return 1;
+			}
+			return num * arguments.callee(num - 1);//factorial
+		}
+
+		function factorial2(num){
+			var sum = 1;
+			for(var i=1; i<=num; i++){//i==1||i==2
+				sum *= i;
+			}
+			return sum;
+		}
+		document.write(factorial2(10));
+
+
+		// var num = 10;
+		// document.write(num + ":的阶乘为" + factorial(num) + '<br/>');
+
+
+		// //编写程序，计算 1!+2!+3!+…..＋10！的结果
+		// var sum = 0;//每次阶乘完的结果的和
+		// for(var i=1; i<=num; i++){
+		// 	sum += factorial(i);//1!+2!+3!+....+10!
+		// }
+
+		// document.write(sum);
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

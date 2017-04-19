@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="div1">
+		<h1 id="h1">hhhhhh</h1>
+		<p>pppppppp</p>
+	</div>
+
+	<script>
+		var oDiv = document.getElementById('div1');
+		var oH1 = document.getElementById('h1');
+
+		// 1.next()找到下一个兄弟
+		function next(elem){
+			do{
+				elem = elem.nextSibling;
+			}while(elem && elem.nodeType != 1);
+			return elem;
+		}
+		// var nextSb = next(oH1);
+		// console.log(nextSb);
+
+
+		// 2.first()找到第一个孩子
+		function first(elem){
+			elem = elem.firstChild;
+			return elem && elem.nodeType == 1 ? elem : next(elem);
+
+		}
+		console.log(first(oDiv));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

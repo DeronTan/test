@@ -1,0 +1,180 @@
+/********css reset开始************/
+*{
+	margin: 0;
+	padding: 0;
+}
+ol, ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+img{
+	border: 0;
+}
+body{
+	height: 2000px;
+}
+/********css reset结束************/
+
+/********header开始************/
+#header{
+	height: 95px;
+}
+#header .wrapper{
+	height: 95px;
+	background: url(../img/logo.jpg) no-repeat left center;
+	position: relative;
+}
+#search{
+	width: 262px;
+	height: 30px;
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	left: 50%;
+	margin-left: -131px;
+	border: 1px solid red;
+}
+#search .search-text{
+	width: 212px;
+	height: 30px;
+	border: 0;
+	float: left;
+	outline: none;
+	text-indent: 10px;
+}
+#search .search-btn{
+	width: 50px;
+	height: 30px;
+	border: 0;
+	float: right;
+	background: red;
+	color: #fff;
+}
+#search .search-list{
+	border: 1px solid #ccc;
+	margin-left: -1px;
+	margin-right: -1px;
+	clear: both;
+	border-top: 0px;
+	width: 212px;
+	display: none;
+}
+#search .search-list li{
+	height: 20px;
+	border-bottom: 1px dashed #ccc;
+	line-height: 20px;
+	text-indent: 10px;
+}
+
+#search .search-list .last{
+	border-bottom: 0;
+}
+
+/*#search .search-list li:last-child{
+	border-bottom: 0;
+}*/
+#header .icon{
+	width: 33px;
+	height: 31px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	margin-right: 20px;
+}
+#icons{
+	width: 140px;
+	height: 32px;
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+	right: 0;
+}
+#icons span{
+	float: left;
+}
+
+#icons .qq{
+	background-image: url(../img/top_qq.jpg);
+}
+#icons .qq:hover{
+	background-image: url(../img/top_qq_h.png);
+}
+
+#icons .weibo{
+	background-image: url(../img/top_weib.jpg);
+}
+#icons .weibo:hover{
+	background-image: url(../img/top_weib_h.png);
+}
+
+#icons .mail{
+	background-image: url(../img/top_you.jpg);
+}
+#icons .mail:hover{
+	background-image: url(../img/top_you_h.png);
+}
+
+#icons .last{
+	margin-right: 0;
+}
+
+/********header结束************/
+
+#banner{
+	height: 390px;
+	background: url(../img/banner.jpg) no-repeat 50% 50%;
+	position: relative;
+}
+#banner img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -44px;
+	margin-left: -223px;
+}
+#go-top{
+	width: 25px;
+	height: 25px;
+	background: url(../img/gotop.png) no-repeat;
+	position: fixed;
+	right: 0;
+	bottom: 50px;
+}
+#go-top:hover{
+	background: url(../img/gotop.png) no-repeat;
+	background-position: -25px 0;
+}
+#go-top a{
+	width: 25px;
+	height: 25px;
+	display: block;
+}
+
+
+.wrapper{
+	width: 1100px;
+	margin: 0 auto;
+	background: #0f0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

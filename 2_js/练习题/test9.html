@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script>
+		function fn(){
+			var result = [];
+			var flag = true;
+			for(var i=100; i<=1000; i++){
+				flag = true;
+				for(var j=2; j<=Math.ceil(i/2); j++){
+					if(i % j == 0){
+						// result.push(i);
+						flag = false;
+						break;
+					}
+				}
+				if(flag){
+					result.push(i);
+				}
+			}
+			return result;
+
+		}
+		var arr = fn();
+		var count = 0;
+		for(var i=0; i<arr.length; i++){
+			count++;
+			document.write(arr[i] + '&nbsp;');
+			if(count % 6 ==0){
+				document.write('<br/>');
+			}
+		}
+
+
+	</script>
+</body>
+</html>

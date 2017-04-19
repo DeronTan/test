@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var getLeapYear = function(year){
+			if((year%4==0 && year%100 !=0) || year%400==0 ){
+				return true;
+			}
+			return false;
+		};
+		var today = new Date();
+		var year = today.getFullYear();
+		var isLeapYear = getLeapYear(year);
+		if(isLeapYear){
+			document.write(year + '年是闰年');//2016年（不）是闰年
+		}else{
+			document.write(year + '年不是闰年');//2016年（不）是闰年
+
+		}
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
