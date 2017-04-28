@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="div1" data-aa-xx="bb" data-dd="cc" ee="ff"></div>
+    <button id="btn">click</button>
+    <!--<script src="jquery-1.12.4.min.js"></script>-->
+    <script>
+//        $(function(){
+//            console.log($('#div1').data('aaXx'));
+//        });
+
+//        var oDiv = document.querySelector('#div1');
+//        console.log(oDiv.dataset);
+
+        var oBtn = document.getElementById('btn');
+        oBtn.addEventListener('click', function(){
+            var oScript = document.createElement('script');
+            oScript.onload = function(){
+                alert('end');
+            };
+            oScript.src = 'jquery-1.12.4.min.js';
+
+            document.body.appendChild(oScript);
+        });
+
+
+
+        defer async
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

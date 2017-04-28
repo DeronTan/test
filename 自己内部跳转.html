@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>内部跳转</title>
+	<meta charset="utf-8">
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#find{
+		height: 100px;
+		list-style: none;
+	}
+	#find li{
+		float: left;
+		margin-left: 50px;
+	}
+	#first{
+		height: 200px;
+		background: red;
+		margin-top: 500px;
+	}
+	#second{
+		height: 200px;
+		background: yellow;
+	}
+	#third{
+		height: 200px;
+		background: gray;
+		margin-bottom: 1000px;
+	}
+	</style>
+</head>
+<body>
+	<ul id="find">
+		<li><a href="#first">click1</a></li>
+		<li><a href="#second">click2</a></li>
+		<li><a href="#third">click3</a></li>
+	</ul>
+	<div id="first"></div>
+	<div id="second"></div>
+	<div id="third"></div>
+	<!-- <script src='jquery.js'></script> -->
+	<script src="jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			$('#find a').on('click',function(){
+				var href=$(this).attr('href');
+				var top=$(href).offset().top;
+				$(document.body).animate({
+					scrollTop:top
+				},500);
+				history.pushState(top,'');
+				return false;
+			});
+			window.onpopstate=function(e){
+				$(document.body).animate({
+					scrollTop:e.state
+				},500);
+			};
+		});
+	</script>
+</body>
+</html>

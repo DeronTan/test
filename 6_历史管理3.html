@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #menu{
+            list-style: none;
+            height: 50px;
+            margin-top: 500px;
+        }
+        #menu li{
+            float: left;
+            margin-right: 50px;
+        }
+        #div1{
+            height: 300px;
+            /*background: #ff0000;*/
+            margin-top: 500px;
+        }
+        #div2{
+            height: 300px;
+            /*background: #0f0;*/
+        }
+        #div3{
+            height: 300px;
+            /*background: #00f;*/
+            margin-bottom: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li><a href="#div1">link 1</a></li>
+        <li><a href="#div2">link 2</a></li>
+        <li><a href="#div3">link 3</a></li>
+    </ul>
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <div id="div3">div3</div>
+
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $('#menu a').on('click', function(){
+                var href = $(this).attr('href');
+                var top = $(href).offset().top;
+                $(document.body).animate({
+                    scrollTop : top
+                }, 500);
+                history.pushState(top, '');
+                return false;
+            });
+            window.onpopstate = function(e){
+                $(document.body).animate({
+                    scrollTop : e.state
+                }, 500);
+            };
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
